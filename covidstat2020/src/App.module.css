@@ -1,16 +1,16 @@
 body {
-    background-color: rgb(167, 163, 163);
+    background-color: rgb(243, 243, 243);
   }
   
   .container {
     display: flex;
-    align-items: center;
     flex-direction: column;
   }
   
   .image {
     width: 370px;
-    margin-top: 50px;
+    margin-top: 25px;
+    align-items: center;
   }
   
   @media only screen and (max-width: 770px) {
