@@ -1,6 +1,5 @@
 .container {
-    display: flex;
-    justify-content: right;
+    align-self: center;
     width: 65%;
   }
   

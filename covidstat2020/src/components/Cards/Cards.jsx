@@ -11,11 +11,11 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 
   return (
     <div className={styles.container}>
-      <Grid container spacing={3} justify="center">
+      <Grid container spacing={2} alignItems="flex-end">
         <Grid item xs={12} md={3} component={Card} className={classCombiningStyles(styles.card, styles.infected)}>
           <CardContent>
-            <Typography variant="body2" component="p"> ACTIVE CASES </Typography>
-            <Typography variant="h5" component="h2">
+            <Typography variant="body2" component="p"> ACTIVE </Typography>
+            <Typography variant="body1" component="p">
               <CountUp start={0} end={confirmed.value} duration={2.75} separator="," />
             </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
@@ -24,7 +24,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <Grid item xs={12} md={3} component={Card} className={classCombiningStyles(styles.card, styles.recovered)}>
           <CardContent>
             <Typography variant="body2" component="p"> RECOVERED </Typography>
-            <Typography variant="h5" component="h2">
+            <Typography variant="body1" component="p">
               <CountUp start={0} end={recovered.value} duration={2.75} separator="," />
             </Typography>
             <Typography color="textSecondary">
@@ -36,7 +36,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <Grid item xs={12} md={3} component={Card} className={classCombiningStyles(styles.card, styles.deaths)}>
           <CardContent>
             <Typography variant="body2" component="p"> DEATHS </Typography>
-            <Typography variant="h5" component="h2">
+            <Typography variant="body1" component="p">
               <CountUp start={0} end={deaths.value} duration={2.75} separator="," />
             </Typography>
             <Typography color="textSecondary">
