@@ -1,4 +1,4 @@
-#### COVID:19-20 Tracker Application
+#### COVID:19-20 Tracker Application : http://devinadhuri.com/covidtrack/
 
 This is a COVID:19-20 Stats/Tracker Application. It gives the user a visulization of currently avaiable data all around the globe. <br />
 
