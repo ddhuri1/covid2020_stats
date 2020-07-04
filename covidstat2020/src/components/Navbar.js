@@ -4,9 +4,9 @@ import ShowMap from './ShowMap/ShowMap'
 
 const Navbar = (props) => {
     return (
-      <nav className="nav-wrapper grey darken-3">
+      <nav className="nav-wrapper grey darken-4">
         <div className="container">
-          <Link to='/' className="brand-logo">COVID-19</Link>
+          <Link to='/covidtrack' className="brand-logo left" >COVID-19</Link>
           <ShowMap />
         </div>
       </nav>

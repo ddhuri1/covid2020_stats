@@ -12,4 +12,3 @@ const ShowMap = () =>{
 }
 export default ShowMap;
 
-//sk.eyJ1IjoiZGRodXJpMSIsImEiOiJja2M3eGhheDUxNjkwMnJvYmI2Z3c5eGhzIn0.qPvEQbHWS1Pd5JPhO_SXqw
