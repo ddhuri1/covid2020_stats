@@ -15,6 +15,7 @@ This is a COVID:19-20 Stats/Tracker Application.  <br />
      - ```npm install --save chart.js```
      - ```npm install --save @material-ui/core```
      - ```npm install react-router-dom```
-     ```npm i node-sass mapbox-gl swr country-code-lookup```
+     - ```npm i node-sass mapbox-gl swr country-code-lookup```
+     - ```npm install mapbox-gl @mapbox/mapbox-gl-directions```
    - API used: https://covid19.mathdro.id/api and https://corona.lmao.ninja/v2/jhucsse
    - Access token from https://account.mapbox.com/ account

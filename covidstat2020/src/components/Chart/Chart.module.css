@@ -1,6 +1,6 @@
-.container {
-    align-self: center;
-    width: 65%;
+.chart {
+    margin-left: 50px;
+    width: 90%;
   }
   
   @media only screen and (max-width: 770px) {
