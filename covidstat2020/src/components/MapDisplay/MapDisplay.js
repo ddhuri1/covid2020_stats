@@ -2,12 +2,17 @@ import React, { useRef, useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 import "./MapDisplay.css";
 import "mapbox-gl/dist/mapbox-gl.css";
+import lookup from 'country-code-lookup';
 import useSWR from "swr";
-import lookup from "country-code-lookup";
-mapboxgl.accessToken ='pk.eyJ1IjoiZGRodXJpMSIsImEiOiJja2M3eGN1am0wbmFzMnJvNHU5MHA4OXN1In0.Ckmy4NZe95uJZ75Vxzkh0w';
+
+const config = require('./config.js');
+const key = config.googleMapsKey;
+
+mapboxgl.accessToken = key;
 
 function MapDisplay() {
-  const mapboxElRef = useRef(null); // DOM element to render map
+  const mapboxElRef = useRef(null); 
+  
   const fetcher = url =>
     fetch(url)
       .then(r => r.json())
@@ -17,38 +22,38 @@ function MapDisplay() {
           geometry: {
             type: "Point",
             coordinates: [
-              point.coordinates.longitude,
-              point.coordinates.latitude
+              point.long,
+              point.lat
             ]
           },
           properties: {
             id: index,
-            country: point.country,
-            province: point.province,
-            cases: point.stats.confirmed,
-            deaths: point.stats.deaths
+            country: point.countryRegion,
+            province: point.combinedKey,
+            cases: point.confirmed,
+            recovered: point.recovered,
+            active: point.active,
+            deaths: point.deaths,
+            incidentRate: point.incidentRate,
+            iso1: point.iso3,
+            iso2: point.iso2
           }
         }))
       );
 
-
-  // Fetching our data with swr package
-  const { data } = useSWR("https://corona.lmao.ninja/v2/jhucsse", fetcher)
-  // Initialize our map
+  const { data } = useSWR("https://covid19.mathdro.id/api/confirmed", fetcher)
+  
   useEffect(() => {
     if (data) {
       const map = new mapboxgl.Map({
         container: mapboxElRef.current,
-        //style: "mapbox://styles/notalemesa/ck8dqwdum09ju1ioj65e3ql3k",
         //style: 'mapbox://styles/ddhuri1/ckc8ebhry2clv1ip0vbmf121x',
         style: "mapbox://styles/ddhuri1/ckc9rb7ee2eqs1iqv032xzf7j",
         center: [16, 27],
         zoom: 2
       });
       map.addControl(new mapboxgl.NavigationControl());
-
       map.once("load", function() {
-        // Add our SOURCE
         map.addSource("points", {
           type: "geojson",
           data: {
@@ -59,17 +64,17 @@ function MapDisplay() {
 
         map.addLayer({
           id: "circles",
-          source: "points", // this should be the id of source
+          source: "points",
           type: "circle",
           paint: {
-            "circle-opacity": 0.75,
+            "circle-opacity": 0.35,
             "circle-stroke-width": [
               "interpolate",
               ["linear"],
               ["get", "cases"],
               1,
               1,
-              100000,
+              50000,
               1.75
             ],
             "circle-radius": [
@@ -78,15 +83,15 @@ function MapDisplay() {
               ["get", "cases"],
               1,
               4,
-              1000,
+              500,
               8,
-              4000,
+              2000,
               10,
-              8000,
+              4000,
               14,
-              12000,
+              6000,
               18,
-              100000,
+              50000,
               40
             ],
             "circle-color": [
@@ -94,40 +99,44 @@ function MapDisplay() {
               ["linear"],
               ["get", "cases"],
               1,
-              "#ffffb2",
+              "#fef0d9",
               5000,
-              "#fed976",
+              "#fdd49e",
               10000,
-              "#feb24c",
+              "#fdbb84",
               25000,
-              "#fd8d3c",
+              "#fc8d59",
               50000,
-              "#fc4e2a",
+              "#ef6548",
               75000,
-              "#e31a1c",
+              "#d7301f",
               100000,
-              "#b10026"
+              "#990000"
             ]
           }
         });
 
         const popup = new mapboxgl.Popup({
-          closeButton: false,
-          closeOnClick: false
+          closeButton: true,
+          closeOnClick: true
         });
 
         let lastId;
 
         map.on("mousemove", "circles", e => {
           const id = e.features[0].properties.id;
-
           if (id !== lastId) {
             lastId = id;
             const {
               cases,
+              recovered,
+              active,
               deaths,
               country,
-              province
+              province,
+              incidentRate,
+              iso1,
+              iso2
             } = e.features[0].properties;
 
             // Change the pointer type on mouseenter
@@ -135,26 +144,22 @@ function MapDisplay() {
 
             const coordinates = e.features[0].geometry.coordinates.slice();
 
-            const countryISO =
-              lookup.byCountry(country)?.iso2 ||
-              lookup.byInternet(country)?.iso2;
-            const provinceHTML =
-              province !== "null" ? `<p>Province: <b>${province}</b></p>` : "";
+            const provinceHTML = province !== "null" ? `<p>Province: <b>${province}</b></p>` : "";
             const mortalityRate = ((deaths / cases) * 100).toFixed(2);
-            const countryFlagHTML = Boolean(countryISO)
-              ? `<img src="https://www.countryflags.io/${countryISO}/flat/64.png"></img>`
-              : "";
-
-            const HTML = `<p>Country: <b>${country}</b></p>
+            const countryISO = iso1 || iso2;
+            const flagCountryISO = lookup.byCountry(country)?.iso2 || lookup.byInternet(country)?.iso2;
+            const countryFlagHTML = Boolean(countryISO) ? `<img src="https://www.countryflags.io/${flagCountryISO}/flat/64.png"></img>` : "";
+            const HTML =
+                `<p>Country: <b>${country}</b></p>
                 ${provinceHTML}
-                <p>Cases: <b>${cases}</b></p>
+                <p>Total Cases: <b>${cases}</b></p>
+                <p>Recovered: <b>${recovered}</b></p>
+                <p>Active: <b>${active}</b></p>
                 <p>Deaths: <b>${deaths}</b></p>
                 <p>Mortality Rate: <b>${mortalityRate}%</b></p>
+                <p>Incident Rate: <b>${incidentRate}%</b></p>
                 ${countryFlagHTML}`;
 
-            // Ensure that if the map is zoomed out such that multiple
-            // copies of the feature are visible, the popup appears
-            // over the copy being pointed to.
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
               coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
@@ -180,24 +185,4 @@ function MapDisplay() {
   );
 } 
 
-/*
-class MapDisplay extends React.Component {
-  
-  componentDidMount() {
-    
-    const map = new mapboxgl.Map({
-      container: this.mapboxElRef.current,
-      style: 'mapbox://styles/ddhuri1/ckc8ebhry2clv1ip0vbmf121x',
-      center: [10, 40],
-      zoom: 2
-    });
-  }
-  render() {
-    return (
-      <div ref={el => (this.mapboxElRef = el)} className="mapWrapper" />
-    );
-  }
-}
-
-*/
 export default MapDisplay;
