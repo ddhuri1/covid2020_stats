@@ -117,8 +117,8 @@ function MapDisplay() {
         });
 
         const popup = new mapboxgl.Popup({
-          closeButton: true,
-          closeOnClick: true
+          closeButton: false,
+          closeOnClick: false
         });
 
         let lastId;
