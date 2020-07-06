@@ -8,7 +8,7 @@ This is a COVID:19 Stats/Tracker Application. <br />
 3. **App Details:**
     - This app gives the user a visulization of currently available data all around the globe.
     - The user can choose to view the entire **Global** data with the infected and deaths statistics. 
-    - The user can also view a graph of per **Per Country-State-County** stats.
+    - The user can also view a graph of per **Per Country-State-County** stats. (ZOOM IN TO VIEW)
 	    -  :small_red_triangle: Note that the active cases isnt availavble for visualizing over the chart at the time due to API constraints. 
     -  These stats give us the following:
 	    :heavy_check_mark: Total Cases
@@ -30,4 +30,5 @@ This is a COVID:19 Stats/Tracker Application. <br />
 		- ```npm install mapbox-gl swr country-code-lookup @mapbox/mapbox-gl-directions```
 	- API :link: https://covid19.mathdro.id/api and https://covid19.mathdro.id/api/confirmed
 	- Access token  :link: https://account.mapbox.com/ account
-	- Color palette :link: https://colorbrewer2.org/#type=sequential&scheme=OrRd&n=7
+	- Color palette :link: https://colorbrewer2.org/#type=sequential&scheme=PuRd&n=6
+	- Location finder :link: https://demos.mapbox.com/location-helper/

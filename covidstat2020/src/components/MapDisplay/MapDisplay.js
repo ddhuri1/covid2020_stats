@@ -49,8 +49,8 @@ function MapDisplay() {
         container: mapboxElRef.current,
         //style: 'mapbox://styles/ddhuri1/ckc8ebhry2clv1ip0vbmf121x',
         style: "mapbox://styles/ddhuri1/ckc9rb7ee2eqs1iqv032xzf7j",
-        center: [16, 27],
-        zoom: 2
+        center: [ -96.96369, 37.44737],
+        zoom: 3.90
       });
       map.addControl(new mapboxgl.NavigationControl());
       map.once("load", function() {
@@ -72,46 +72,31 @@ function MapDisplay() {
               "interpolate",
               ["linear"],
               ["get", "cases"],
-              1,
-              1,
-              50000,
-              1.75
+              1,1,
+              25000,1.30,
+              50000,1.75
             ],
             "circle-radius": [
               "interpolate",
               ["linear"],
               ["get", "cases"],
-              1,
-              4,
-              500,
-              8,
-              2000,
-              10,
-              4000,
-              14,
-              6000,
-              18,
-              50000,
-              40
+              100,2,
+              500,4,
+              2000,5,
+              10000,6,
+              25000,9,
+              50000,10
             ],
             "circle-color": [
               "interpolate",
               ["linear"],
               ["get", "cases"],
-              1,
-              "#fef0d9",
-              5000,
-              "#fdd49e",
-              10000,
-              "#fdbb84",
-              25000,
-              "#fc8d59",
-              50000,
-              "#ef6548",
-              75000,
-              "#d7301f",
-              100000,
-              "#990000"
+              1, "#f1eef6",
+              500,"#d4b9da",
+              2000,"#c994c7",
+              4000, "#df65b0",
+              6000,"#dd1c77",
+              50000,"#980043"
             ]
           }
         });
