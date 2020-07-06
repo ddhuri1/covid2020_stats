@@ -4,7 +4,8 @@
   }
   
   @media only screen and (max-width: 770px) {
-    .container {
+    .chart {
+      margin-left: 0.1px;
       width: 100%;
     }
   }

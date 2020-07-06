@@ -1,15 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ShowMap from './ShowMap'
+import "./ShowMap.css";
 
 const Navbar = (props) => {
+
+    const divStyle = {
+      float: 'right',
+      marginRight: '50px'
+    };
+
     return (
-      <nav className="nav-wrapper grey darken-4">
-        <div className="container">
-          <Link to='/covidtrack' className="brand-logo left" >COVID-19</Link>
-          <ShowMap />
-        </div>
-      </nav>
+      <div className="navbar">
+        <ul>
+          <li><Link to='/covidtrack'>COVID-19</Link></li>
+          <li style={divStyle} class="active" ><ShowMap /></li>
+        </ul>
+      </div>
     )
   }
   
