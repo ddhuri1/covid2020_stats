@@ -1,8 +1,7 @@
 import React from 'react';
-import {MapDisplay}  from './components';
+import {MapDisplay,Navbar}  from './components';
 import styles from './App.module.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Navbar from './components/Navbar';
 import MainPage from './components/MainPage';
 
 class App extends React.Component {

@@ -40,7 +40,8 @@ function MapDisplay() {
       const map = new mapboxgl.Map({
         container: mapboxElRef.current,
         //style: "mapbox://styles/notalemesa/ck8dqwdum09ju1ioj65e3ql3k",
-        style: 'mapbox://styles/ddhuri1/ckc8ebhry2clv1ip0vbmf121x',
+        //style: 'mapbox://styles/ddhuri1/ckc8ebhry2clv1ip0vbmf121x',
+        style: "mapbox://styles/ddhuri1/ckc9rb7ee2eqs1iqv032xzf7j",
         center: [16, 27],
         zoom: 2
       });
