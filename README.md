@@ -28,6 +28,7 @@ This is a COVID:19 Stats/Tracker Application. <br />
 		- ```npm install --save @material-ui/core```
 		- ```npm install react-router-dom```
 		- ```npm install mapbox-gl swr country-code-lookup @mapbox/mapbox-gl-directions```
+		- ```npm i --save @fortawesome/fontawesome-svg-core  @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome```
 	- API :link: https://covid19.mathdro.id/api and https://covid19.mathdro.id/api/confirmed
 	- Access token  :link: https://account.mapbox.com/ account
 	- Color palette :link: https://colorbrewer2.org/#type=sequential&scheme=PuRd&n=6

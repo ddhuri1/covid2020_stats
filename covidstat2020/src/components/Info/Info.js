@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import "./Info.css";
 
@@ -12,7 +11,7 @@ const Info = () =>{
                     <p>Get information on symptoms, testing, what to do if you are sick, and at risk groups. Find tips for managing your daily life, including going out, running errands, and coping with stress.</p>
                 </div>
                 <div className="links">
-                    <p><Link to='/protect' className="link">  HOW TO PROTECT YOURSELF ??</Link></p>
+                    <p><Link to='/protect' className="link"> HOW TO PROTECT YOURSELF ??</Link></p>
                 </div>
                 <div className="links">
                     <p><Link to='/sick' className="link"> WHAT TO DO IF YOU ARE SICK ??</Link></p>
@@ -20,16 +19,17 @@ const Info = () =>{
             </div>
             <div className="box right">
                 <div className="links">
-                    <p><Link to='/sym' className="link"> SYMPTOMS OF COVID'19 ??</Link></p>
+                    <p><i className="fas fa-head-side-cough fa-2x" />
+                    <Link to='/sym' className="link">SYMPTOMS OF COVID'19 ??</Link></p>
                 </div>
                 <div className="links">
-                    <p><Link to='/check' className="link"> SELF CHECK SYMPTOMS ??</Link></p>
+                    <p><i class="fas fa-user-md fa-2x" /><Link to='/check' className="linkS">SELF CHECK SYMPTOMS ??</Link></p>
                 </div>
                 <div className="links">
-                    <p><Link to='/people' className="link"> PEOPLE AT RISK ??</Link></p>
+                    <p><i class="fas fa-people-arrows fa-2x" /><Link to='/people' className="link">PEOPLE AT RISK ??</Link></p>
                 </div>
                 <div className="links">
-                    <p><Link to='/test' className="link">  SHOULD I GET TESTED ??</Link></p> 
+                    <p><i class="fas fa-vials fa-2x" /><Link to='/test' className="link">SHOULD I GET TESTED ??</Link></p> 
                 </div>
             </div>
         </div>

@@ -15,8 +15,8 @@ const Navbar = (props) => {
       <div className="navbar">
         <ul>
           <li><Link to='/covidtrack'>COVID-19</Link></li>
-          <li style={divStyle} class="active" ><ShowMap /></li>
-          <li style={divStyle} class="active" ><InfoMain /></li>
+          <li style={divStyle} className="active" ><ShowMap /></li>
+          <li style={divStyle} className="active" ><InfoMain /></li>
         </ul>
       </div>
     )
