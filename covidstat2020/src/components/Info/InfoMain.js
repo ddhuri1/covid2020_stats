@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-import "./ShowMap.css";
+//import "./ShowMap.css";
 
-const ShowMap = () =>{
+const InfoMain = () =>{
     return (
         <div className="tooltip">
-            <NavLink to='/map' >MAP VIEW</NavLink>
+            <NavLink to='/info' >INFORMATION</NavLink>
         </div>
     );
 }
-export default ShowMap;
+export default InfoMain;

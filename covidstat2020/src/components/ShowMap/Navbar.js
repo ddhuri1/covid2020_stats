@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ShowMap from './ShowMap'
+import InfoMain from '../Info/InfoMain'
 import "./ShowMap.css";
 
 const Navbar = (props) => {
@@ -15,6 +16,7 @@ const Navbar = (props) => {
         <ul>
           <li><Link to='/covidtrack'>COVID-19</Link></li>
           <li style={divStyle} class="active" ><ShowMap /></li>
+          <li style={divStyle} class="active" ><InfoMain /></li>
         </ul>
       </div>
     )

@@ -1,0 +1,93 @@
+.infoMain{
+    box-sizing: border-box;
+}
+
+.box {
+    float: left;
+    padding: 10px;
+    height: 100%;
+    margin-top: 3rem;
+
+}
+.left {
+    width: 45%;
+    margin-left: 3rem;
+    border: 2px solid rgb(116, 208, 231);
+    word-wrap: break-word;
+}
+
+.left .information{
+    position: relative;
+    width: 100%;
+    padding: 0.5%;
+    background: rgb(240, 241, 240);
+}
+
+.left .links{
+    position: relative;
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(116, 208, 231);
+    margin-left: 10%;
+    margin-bottom: 20px;
+    margin-right: 10%;
+}
+
+.left .links:hover {
+    opacity: 1;
+    background-color: rgb(17, 41, 70);
+    color: aliceblue;
+}
+
+.right {
+    width: 45%;
+    margin-right: 3rem;
+    border: 2px solid rgb(137, 233, 225);
+    word-wrap: break-word;
+}
+
+.right .information{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: rgb(240, 241, 240);
+}
+
+.right .links{
+    position: relative;
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    background: rgb(137, 233, 225);
+}
+
+.right .links:hover {
+    opacity: 1;
+    background-color: rgb(9, 63, 58);
+    color: aliceblue;
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .box {
+      width: 100%;
+      word-wrap: break-word;
+    }
+
+    .left{
+        margin: auto;
+    }
+
+    .right{
+        margin: auto;
+        margin-top: 30px;;
+    }
+  }
+
+
