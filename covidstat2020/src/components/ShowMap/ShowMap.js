@@ -5,7 +5,7 @@ import "./ShowMap.css";
 const ShowMap = () =>{
     return (
         <div className="tooltip">
-            <NavLink to='/map' >MAP VIEW</NavLink>
+            <NavLink to='/map' className='lV'>MAP VIEW</NavLink>
         </div>
     );
 }

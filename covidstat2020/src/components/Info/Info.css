@@ -2,6 +2,7 @@
 .box {
     float: left;
     margin-top: 3rem;
+    font-family: "Courier New", Courier, monospace;
 }
 
 .left {
@@ -30,7 +31,10 @@
     color: rgb(0, 0, 0);
 
 }
-.left .links .link {color:#0c0c0c;}
+.left .links .link {
+    color:#0c0c0c;
+    text-decoration: none;
+}
 .left .links .link:hover {
     color: aliceblue;
 }
@@ -70,10 +74,12 @@
 .right .links .link {
     margin-left: 7%;
     color:#0c0c0c;
+    text-decoration: none;
 }
 .right .links .linkS {
     margin-left: 9%;
     color:#0c0c0c;
+    text-decoration: none;
 }
 .right .links .link:hover {
     color: aliceblue;
@@ -91,7 +97,6 @@
 .protect h1{
     text-align: center;
 }
-
 .protect .warn{
     background-color: khaki;
     padding: 5px;
@@ -102,10 +107,81 @@
 .protect .warn i {
     color: red;
 }
-
 .protect .inform{
+    float: left;
+    margin: auto;
+    margin-top: 30px;
     margin-left: 30px;
+
 }
+.protect .inform h2{
+    color: rgb(4, 4, 77);
+    text-align: center;
+}
+.protect .left{
+    width: 40%;
+    padding: 10px;
+    margin-left: 3rem;
+    border: 1px solid rgb(255, 255, 255);
+    word-wrap: break-word;
+    text-align: left;
+}
+.protect .right{
+    width: 40%;
+    padding: 10px;
+    margin-left: 3rem;
+    border: 1px solid rgb(255, 255, 255);
+    word-wrap: break-word;
+}
+/*Sick*/
+.protect .cardLevel{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(240, 239, 239);
+	border-radius: 4px;
+	max-width: 50%;
+	height: 10%;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+	color: #444;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    margin-top: 2%;
+}
+.protect .cardLevel a{
+    color: #000;
+    text-decoration: none;
+}
+.protect .cardLevel:hover {
+    box-shadow: 12px 12px 2px 1px rgba(1, 1, 43, 0.2);
+}
+
+.protect .lev4{
+    max-width: 70%;
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: rgb(213, 231, 241);
+    border-radius: 4px;
+	height: 10%;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    margin: auto;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+
+/*Symptoms*/
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+
 @media screen and (max-width: 800px) {
     .box {
         width: 100%;
@@ -137,9 +213,23 @@
         padding: 1px;
     }
     .protect .inform h2{
-        font-size: 1.8em ;        
+        font-size: 1.8em ;  
+        text-align: left;      
     }
-    
+    .protect .inform{
+        width: 90%;
+        word-wrap: break-word;       
+    }
+    .protect .left{
+        margin: auto;
+    }
+    .protect .right{
+        margin: auto;        
+    }
+    .protect .cardLevel{
+        max-width: 70%;
+        background-color: rgb(241, 236, 236);
+    }
 }
 
 

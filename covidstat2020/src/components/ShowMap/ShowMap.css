@@ -4,23 +4,33 @@
   padding: 0;
   margin-top: 0;
   overflow: hidden;
-  background-color: rgb(180, 177, 177);
+  background-color: rgb(88, 88, 88);
   color: white;
+  text-decoration: none;
 }
 .navbar li  {
   float: left;
   padding: 14px 16px;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
 }
 .navbar ul li{
   color: white !important;
-
+  text-decoration: none;
 }
 .navbar li Link {
   text-align: center;
   text-decoration: none;
 }
+.navbar li .lV:visited{
+  text-decoration:none;
+  color: white !important;
+}
+
 .navbar li:hover:not(.active) {
-  background-color: rgb(91, 93, 94);
+  background-color: rgb(159, 160, 160);
+  text-decoration: none;
 }
 .navbar .aR{
   float:right;

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 const InfoMain = () =>{
     return (
         <div >
-            <NavLink to='/info' >INFORMATION</NavLink>
+            <NavLink to='/info' className='lV'>INFORMATION</NavLink>
         </div>
     );
 }

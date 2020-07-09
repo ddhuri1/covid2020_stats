@@ -23,7 +23,7 @@ const Info = () =>{
                     <Link to='/sym' className="link">SYMPTOMS OF COVID'19 ??</Link></p>
                 </div>
                 <div className="links">
-                    <p><i class="fas fa-user-md fa-2x" /><Link to='/check' className="linkS">SELF CHECK SYMPTOMS ??</Link></p>
+                    <p><i class="fas fa-user-md fa-2x" /><a className="linkS" href='https://landing.google.com/screener/covid19?source=google' without rel="noopener noreferrer"  target="_blank">SELF CHECK SYMPTOMS ??</a></p>
                 </div>
                 <div className="links">
                     <p><i class="fas fa-people-arrows fa-2x" /><Link to='/people' className="link">PEOPLE AT RISK ??</Link></p>
