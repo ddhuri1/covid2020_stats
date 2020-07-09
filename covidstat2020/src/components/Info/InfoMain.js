@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const InfoMain = () =>{
     return (
-        <div className="tooltip">
+        <div >
             <NavLink to='/info' >INFORMATION</NavLink>
         </div>
     );

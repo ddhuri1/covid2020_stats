@@ -1,25 +1,21 @@
 
-  .card {
-    align-self: center;
-    margin: 1% 4% !important;
-  }
-  
-  .infected {
-    border-bottom: 5px solid rgba(27, 168, 211, 0.774);
-  }
-  
-  .recovered{
-    border-bottom: 5px solid rgba(4, 148, 4, 0.479);
-  }
-  
-  .deaths{
-    border-bottom: 5px solid rgba(212, 11, 11, 0.808);
-  }
-  
-  @media only screen and (max-width: 770px) {
-    .card {
-      margin: 0 20%;
-    }
+.card {
+  align-self: center;
+  margin: 1% 4% !important;
+}
+.infected {
+  border-bottom: 5px solid rgba(27, 168, 211, 0.774);
+}
+.recovered{
+  border-bottom: 5px solid rgba(4, 148, 4, 0.479);
+}
+.deaths{
+  border-bottom: 5px solid rgba(212, 11, 11, 0.808);
+}
 
-    
-  }
+@media only screen and (max-width: 770px) {
+  .card {
+    margin: 1% 4% !important;
+    text-align: center;
+  }  
+}

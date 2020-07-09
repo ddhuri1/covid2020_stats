@@ -2,8 +2,17 @@
   align-self: center;
   text-align: center;
 }
+
 .forms {
-    width: 42%;
+  width: 42%;
+  margin-bottom: 30px !important;
+  align-self: center;
+}
+
+@media only screen and (max-width: 770px) { 
+  .forms {
+    width: 90%;
     margin-bottom: 30px !important;
     align-self: center;
   }
+}

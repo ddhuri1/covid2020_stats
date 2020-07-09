@@ -5,22 +5,16 @@ import InfoMain from '../Info/InfoMain'
 import "./ShowMap.css";
 
 const Navbar = (props) => {
+  return (
+    <div className="navbar">
+      <ul>
+        <li ><Link to='/covidtrack'>COVID-19</Link></li>
+        <li className="aR"><ShowMap /></li>
+        <li className="aR"><InfoMain /></li>
+      </ul>
+    </div>
+  )
+}
 
-    const divStyle = {
-      float: 'right',
-      marginRight: '50px'
-    };
-
-    return (
-      <div className="navbar">
-        <ul>
-          <li><Link to='/covidtrack'>COVID-19</Link></li>
-          <li style={divStyle} className="active" ><ShowMap /></li>
-          <li style={divStyle} className="active" ><InfoMain /></li>
-        </ul>
-      </div>
-    )
-  }
-  
-  export default Navbar
+export default Navbar
   

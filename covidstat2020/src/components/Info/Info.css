@@ -1,28 +1,22 @@
 /* INFORMATION */
-.infoMain{
-    box-sizing: border-box;
-}
-
 .box {
     float: left;
-    padding: 10px;
-    height: 100%;
     margin-top: 3rem;
 }
 
 .left {
     width: 45%;
-    margin-left: 3rem;
+    margin-left: 2rem;
     border: 2px solid rgb(116, 208, 231);
     word-wrap: break-word;
     text-align: center;
-
 }
 .left .information{
     position: relative;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     padding: 0.5%;
-    background: rgb(240, 241, 240);
+    word-wrap: break-word;
 }
 .left .links{
     position: relative;
@@ -48,7 +42,7 @@
 
 .right {
     width: 45%;
-    margin-right: 3rem;
+    margin-left: 2rem;
     border: 2px solid rgb(137, 233, 225);
     word-wrap: break-word;
 }
@@ -56,6 +50,7 @@
     position: relative;
     width: 100%;
     padding: 10px;
+    word-wrap: break-word;
     background: rgb(240, 241, 240);
 }
 .right .links{
@@ -93,31 +88,58 @@
 }
 
 /* PROTECT */
-.protect {
-    float: left;
-    margin-top: 1px;
-    margin-left: 30px;
+.protect h1{
+    text-align: center;
 }
 
 .protect .warn{
     background-color: khaki;
     padding: 5px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+.protect .warn i {
+    color: red;
 }
 
+.protect .inform{
+    margin-left: 30px;
+}
 @media screen and (max-width: 800px) {
     .box {
-      width: 100%;
-      word-wrap: break-word;
+        width: 100%;
+        word-wrap: break-word;
     }
-
     .left{
         margin: auto;
     }
-
+    .left .links{
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     .right{
         margin: auto;
         margin-top: 30px;;
     }
-  }
+    .right .links{
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .protect h1{
+        font-size: 2em ;  
+        font-weight: bold;
+    }
+    .protect .warn{
+        background-color: khaki;
+        padding: 1px;
+    }
+    .protect .inform h2{
+        font-size: 1.8em ;        
+    }
+    
+}
 
 

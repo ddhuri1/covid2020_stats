@@ -1,36 +1,35 @@
 .navbar ul {
-  width: 100vw;
   list-style-type: none;
   margin: 0;
+  padding: 0;
+  margin-top: 0;
   overflow: hidden;
-  padding: 20px 20px;
-  background-color: #333;
-}
-
-.navbar li {
-  float: left;
-  margin-left: 10px;
-}
-
-.navbar li Link {
+  background-color: rgb(180, 177, 177);
   color: white;
+}
+.navbar li  {
+  float: left;
+  padding: 14px 16px;
+}
+.navbar ul li{
+  color: white !important;
+
+}
+.navbar li Link {
+  text-align: center;
   text-decoration: none;
 }
-
-.navbar li a:hover:not(.active) {
-  background-color: #333;
+.navbar li:hover:not(.active) {
+  background-color: rgb(91, 93, 94);
+}
+.navbar .aR{
+  float:right;
 }
 
-.active {
-  background-color: #333;
-}
-
-.tooltip {
+/*.tooltip {
   position: relative;
   display: inline-block;
-
 }
-  
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -43,59 +42,10 @@
   left: 50%;
   margin-left: -60px;
 }
-  
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-
+*/
 @media only screen and (max-width: 770px) {
-  .navbar ul {
-    width: 100vw;
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-    padding: 20px 12px;
-    background-color: #333;
-  }
   
-  .navbar li {
-    float: left;
-    margin-left: 5px;
-  }
-  
-  .navbar li Link {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar li a:hover:not(.active) {
-    background-color: #333;
-  }
-  
-  .active {
-    background-color: #333;
-  }
-  
-  .tooltip {
-    position: relative;
-    display: inline-block;
-  
-  }
-    
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: rgb(139, 136, 136);
-    color: #fff;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    margin-left: -60px;
-  }
-    
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
 }
