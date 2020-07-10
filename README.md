@@ -34,3 +34,5 @@ This is a COVID:19 Stats/Tracker Application. <br />
 	- Access token  :link: https://account.mapbox.com/ account
 	- Color palette :link: https://colorbrewer2.org/#type=sequential&scheme=PuRd&n=6
 	- Location finder :link: https://demos.mapbox.com/location-helper/
+
+Content taken from cdn.gov
