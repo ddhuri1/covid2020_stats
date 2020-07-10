@@ -1,0 +1,55 @@
+.precautions h1{
+    text-align: center;
+    margin-top: 4rem;
+    margin: 0;
+}
+.peopImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.ageImg{
+    display: block;
+    width: 100%;
+    height: 30%;
+}
+
+.precautions .inform{
+    float: left;
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.precautions .left{
+    width: 40%;
+    padding: 10px;
+    margin-left: 3rem;
+    border: 1px solid rgb(255, 255, 255);
+    word-wrap: break-word;
+    text-align: left;
+}
+.precautions .right{
+    width: 40%;
+    padding: 10px;
+    margin-left: 3rem;
+    border: 1px solid rgb(255, 255, 255);
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 800px) {
+    .precautions h1{
+        font-size: 1.5em ;  
+        font-weight: bold;
+    }
+    .precautions .inform{
+        width: 90%;
+        word-wrap: break-word;       
+    }
+    .precautions .left{
+        margin: auto;
+    }
+    .precautions .right{
+        margin: auto;        
+    }
+}

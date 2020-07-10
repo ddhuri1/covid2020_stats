@@ -19,6 +19,7 @@ This is a COVID:19 Stats/Tracker Application. <br />
 	    :heavy_check_mark: Incident Rate : The measure of the frequency with which some event, such as a disease or accident, occurs over a specified time period.
 	  - The use can choose to view the infected stats, or the death stats or both by simply clicking on the texts shown above the graph.
 	  - The user can also view an entire map view of the world. -> **MAP VIEW**
+	  - The app gives a quick quide to follow to take precaution sor check if one has symptoms too.
 
 4. **App Creation:**
 	- Create an empty React App using ```npx create-react-app ./```
