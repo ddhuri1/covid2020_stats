@@ -1,13 +1,15 @@
 import React from 'react';
 import "./Info.css";
 import { Link } from 'react-router-dom'
+import image from '../../images/test.jpg';
 
 const Test = () =>{
     return (
         <div className="protect">
-            <h1><i class="fas fa-vial"></i>&nbsp;&nbsp;Testing for COVID-19</h1>
+           
+            <h1><i class="fas fa-vial"></i>&nbsp;&nbsp;Testing for COVID-19</h1><br />
             <div className=" mapShow">
-                <p><a href='https://www.google.com/search?rlz=1C1CHBF_enUS811US811&sxsrf=ALeKk01mnmbXh5SxDTdbku0eiKWE4uks0A:1594405027571&q=covid+testing&npsic=0&rflfq=1&rlha=0&rllag=42101520,-75928484,3318&tbm=lcl&ved=2ahUKEwjvkK_KpcPqAhWyl-AKHd8yBnwQtgN6BAgVECc&rldoc=1' without rel="noopener noreferrer"  target="_blank">Testing places near me!</a></p>
+                <p><a href='https://www.google.com/search?rlz=1C1CHBF_enUS811US811&sxsrf=ALeKk01mnmbXh5SxDTdbku0eiKWE4uks0A:1594405027571&q=covid+testing&npsic=0&rflfq=1&rlha=0&rllag=42101520,-75928484,3318&tbm=lcl&ved=2ahUKEwjvkK_KpcPqAhWyl-AKHd8yBnwQtgN6BAgVECc&rldoc=1' without rel="noopener noreferrer"  target="_blank"><img className='img' src={image} alt="Test" /> Testing places near me!</a></p>
             </div>
             <div className="inform left">
                 <h2>  Two kinds of tests are available for COVID-19:</h2>
