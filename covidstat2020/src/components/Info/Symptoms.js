@@ -34,7 +34,10 @@ const Symptoms = () =>{
                     <br /><br />While more is learned every day, there is still a lot that is unknown about COVID-19 and the virus that causes it. 
                     <br />This <a href='https://www.cdc.gov/flu/symptoms/flu-vs-covid19.htm' without rel="noopener noreferrer"  target="_blank">table</a> compares COVID-19 and flu, given the best available information to date.
                 <br /><br />To learn more about COVID-19, visit <Link to='/covidtrack' without rel="noopener noreferrer"  target="_blank">Coronavirus (COVID-19).</Link>
-                <br /><br />To learn more about flu, visit Influenza (Flu).</p>
+                <br /><br />To learn more about flu, visit Influenza (Flu).</p><br />
+                    <br />
+                    <br />
+                    <br />
             </div>
         </div>
     );

@@ -2,6 +2,9 @@ body {
     margin: 0;
     background-color: rgb(255, 255, 255);
 }
+ Link{
+   text-decoration: none;
+ }
 
 .image {
   display: block;
@@ -11,6 +14,7 @@ body {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+
 
 @media only screen and (max-width: 770px) {
   .image {

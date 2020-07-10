@@ -2,7 +2,6 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 0;
   overflow: hidden;
   background-color: rgb(88, 88, 88);
   color: white;
@@ -10,10 +9,10 @@
 }
 .navbar li  {
   float: left;
-  padding: 14px 16px;
+  padding:10px 16px;
   text-decoration: none;
-  font-size: large;
-  font-weight: 500;
+  font-size: x-large;
+  font-weight: 900;
 }
 .navbar ul li{
   color: white !important;
@@ -22,6 +21,10 @@
 .navbar li Link {
   text-align: center;
   text-decoration: none;
+}
+.navbar li .lV{
+  text-decoration:none;
+  color: white !important;
 }
 .navbar li .lV:visited{
   text-decoration:none;
@@ -35,6 +38,20 @@
 .navbar .aR{
   float:right;
 }
+.navbar .fa-viruses {
+  color: red;
+  font-size: 1.5em;
+}
+.informationLogo .fa-info-circle {
+  color: rgb(7, 85, 255);
+  font-size: 1.5em;
+}
+.tooltip .fa-map-marked {
+  color: rgb(7, 158, 40);
+  font-size: 1.5em;
+}
+
+
 
 /*.tooltip {
   position: relative;
@@ -57,5 +74,14 @@
 }
 */
 @media only screen and (max-width: 770px) {
-  
+  .navbar ul {
+    width: 100%;
+  }
+  .navbar li  {
+    float: left;
+    padding:5px 5px;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 300;
+  }
 }

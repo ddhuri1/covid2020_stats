@@ -74,6 +74,10 @@ const People = () =>{
                                 <li>Seek care immediately if you have a medical emergency.</li>
                                 <li>You may feel increased stress during this pandemic. Fear and anxiety can be overwhelming and cause strong emotions. Learn about stress and coping.</li>
                             </ul>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
                         </li>
                     </div>
                 </ol>

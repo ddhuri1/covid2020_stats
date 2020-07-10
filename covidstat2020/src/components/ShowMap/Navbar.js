@@ -8,7 +8,7 @@ const Navbar = (props) => {
   return (
     <div className="navbar">
       <ul>
-        <li ><Link to='/covidtrack' className="lV">COVID-19</Link></li>
+        <li ><i className="fas fa-viruses "></i><Link to='/covidtrack' className="lV">&nbsp;  COVID-19</Link></li>
         <li className="aR"><ShowMap /></li>
         <li className="aR"><InfoMain /></li>
       </ul>

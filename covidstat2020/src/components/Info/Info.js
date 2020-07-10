@@ -32,6 +32,7 @@ const Info = () =>{
                     <p><i class="fas fa-vials fa-2x" /><Link to='/test' className="link">SHOULD I GET TESTED ??</Link></p> 
                 </div>
             </div>
+            
         </div>
     );
 }

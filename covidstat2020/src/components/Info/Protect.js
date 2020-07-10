@@ -73,6 +73,10 @@ const Protect = () =>{
                     <li>Take your temperature if symptoms develop.</li>
                     <li>Follow <Link to='/sick' without rel="noopener noreferrer"  target="_blank">CDC guidance</Link> if symptoms develop.</li>
                 </ul>
+                <br />
+                    <br />
+                    <br />
+                    <br />
             </div>
         </div>
     );

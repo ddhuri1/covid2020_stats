@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-//import "./ShowMap.css";
+import "../ShowMap/ShowMap.css";
 
 const InfoMain = () =>{
     return (
-        <div >
-            <NavLink to='/info' className='lV'>INFORMATION</NavLink>
+        <div className='informationLogo'>
+            <i className="fas fa-info-circle"></i><NavLink to='/info' className='lV'>&nbsp; INFORMATION</NavLink>
         </div>
     );
 }
