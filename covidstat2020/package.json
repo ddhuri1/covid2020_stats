@@ -17,7 +17,7 @@
     "classnames": "^2.2.6",
     "country-code-lookup": "0.0.17",
     "mapbox-gl": "^1.11.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
     "react-countup": "^4.3.3",
